@@ -38,7 +38,7 @@ class Money{
 
  }
 }
-public class _06 {
+public class _06_Money {
 
 	public static void main(String[] args) {
 
