@@ -60,7 +60,7 @@ class RockScissorPaper{
 	}
 
 
-public class _05 {
+public class _05_가위바위보 {
 	public static void main(String[] args) {
 	      RockScissorPaper game = new RockScissorPaper();
 	      game.run();
