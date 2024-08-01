@@ -28,6 +28,9 @@ public class InstanceofMain2 {
 			PaperBox  pBox=(PaperBox)box;
 			pBox.paperWrap();
 			
+			
+			
+			
 			((PaperBox) box).paperWrap(); //위에 두줄을 요약
 		} else {
 			box.simpleWrap();
