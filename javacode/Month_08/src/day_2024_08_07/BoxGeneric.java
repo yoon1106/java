@@ -1,5 +1,5 @@
 
-package Hw0806;
+package day_2024_08_07;
 
 class Box<T> {
 	private T t;

@@ -1,4 +1,4 @@
-package Hw0806;
+package day_2024_08_07;
 
 //class Box<T>{
 //	private T t;
@@ -11,11 +11,19 @@ package Hw0806;
 //}
 
 public class BoxMain {
-	private static <T> boolean compBox(Box<T> n1, T n2) {
-		if (n1.get().equals (n2)) {
-			return true;
-		} else
-			return false;
+	private static <T> boolean compBox(Box<T> box, T t) {
+		boolean isTrue=true; //불리안 이름지을때 is붙이면 편하다
+		
+		if (box.get().equals (t)) {
+			isTrue=true;
+			
+		} else {
+			isTrue=false;
+			
+		}
+		
+			return isTrue;
+		
 	}
 
 	public static void main(String[] args) {
