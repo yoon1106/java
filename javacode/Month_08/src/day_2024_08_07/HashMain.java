@@ -38,7 +38,9 @@ public class HashMain {
 		n1.add(new Num(1));
 		n1.add(new Num(2));
 		n1.add(new Num(2));
-
+		
+		
+		
 		System.out.println(n1.size() + "개");
 	}
 
