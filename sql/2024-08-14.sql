@@ -27,7 +27,7 @@ create table  students(
 desc students;
 insert into students values(100,'101',60,'³²');
 insert into students values(100,'101',50);
-insert into students values(101,'101',100);
+insert into students values(101,'101',100,'¿©');
 
 --insert into students values(null,'101',100);
 insert into students values(100,null);
