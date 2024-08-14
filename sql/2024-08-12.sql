@@ -82,15 +82,24 @@ create table emp02 as select *from emp;
 select *from emp02;
 desc emp02; 
 
+drop table emp02;
+
 --일부컬럼만 복사
 create table emp03 as select empno, ename from emp;
 desc emp03;
 select *from emp03;
 
 
+select empno,ename,sal
+from emp
+where sal>(select avg(sal)from emp)   order by sal desc ;
 
 
-
+SELECT EMPNO, ENAME, SAL
+FROM EMP
+WHERE SAL>(SELECT AVG(SAL)
+FROM EMP)
+ORDER BY SAL DESC
 
 
 
