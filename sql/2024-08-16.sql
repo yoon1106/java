@@ -1,5 +1,10 @@
 select *from emp;
-select *from dept
+select *from dept;
+
+
+select ename,nvl(to_char(comm),'no commission')from emp;
+
+
 
 --사원번호, 사원명, 직급, 부서번호 4개의 컬럼으로 구성된 EMP01 테이블을 NOT NULL 제약조건을 설정하지 않고 생성하는 경우
 
@@ -52,6 +57,7 @@ select *from emp07;
 
 
 create user scott2  identified by tiger;
+
 
 
 
