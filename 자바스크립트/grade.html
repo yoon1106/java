@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <script>
+        var Kor=parseFloat(prompt("국어 점수"))
+        var Eng=parseFloat(prompt("영어 점수"))
+        var Math=parseFloat(prompt("수학 점수"))
+
+        var total=Kor+Eng+Math;
+        var avg=total/3;
+
+        console.log("총점: "+total);
+        console.log("평균: "+avg.toFixed(2));
+
+        document.write("<h2>총점과 평균</h2>");
+        document.write("<p>총점: "+total+"</p>");
+        document.write("<p>평균: "+avg.toFixed(2)+"</p>");
+
+    </script>
+</body>
+</html>
