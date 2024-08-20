@@ -5,11 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script>
-alert('헬로우 월드');
-</script>
+<script src="js/hello.js" type="text/javascript"></script>
 </head>
 <body>
-안녕하세요
+안녕하ㅛ
 </body>
 </html>

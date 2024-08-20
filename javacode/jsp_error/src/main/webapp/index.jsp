@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-  <%-- <%@ page errorPage="errorPage.jsp"%> --%>
-  
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +9,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		int i=40 / 0;
-	%>
+	<h1>메인페이지 입니다.</h1>
 </body>
 </html>
