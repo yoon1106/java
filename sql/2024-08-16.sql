@@ -1,5 +1,5 @@
-select *from emp;
-select *from dept;
+select * from emp;
+select * from dept;
 
 
 select ename,nvl(to_char(comm),'no commission')from emp;

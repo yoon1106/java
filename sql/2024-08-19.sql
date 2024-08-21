@@ -1,5 +1,5 @@
-select *from emp;
-select *from dept;
+select * from emp;
+select * from dept;
 
 --27>모든 사원의 이름,직업,부서이름,급여 및 등급을 출력하라.
 

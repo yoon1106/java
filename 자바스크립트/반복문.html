@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let sum = 0;
+        for(let i=0; i<=10; i++){
+            sum +=i;
+        }
+
+        document.write(sum + "</br>");
+
+        document.write( "<hr>");
+    </script>
+</head>
+<body>
+    <h1>구구단</h1>
+            <script>
+        for(let i=1; i<10; i++){
+            if(i % 2 !=0){
+                    continue;
+                }
+                document.write(i+"단"+"<br>");
+            for(let j=1; j<10; j++){
+        
+            document.write(i + "x" + j + "=" + (i*j) + "<br>");
+        }
+        document.write("<br>");
+    }
+
+
+
+    </script>
+    <h1> 1부터 100까지의 숫자 중에 3의 배수이고 2의 배수인 숫자만 출력 </h1>
+    <script>
+        for(let i=1; i<=100; i++){
+            if((i % 3 == 0)&&(i % 2 == 0)){
+                document.write(i + "<br>");
+            }
+        }
+
+    </script>
+
+
+
+        <h1> 1부터 100까지의 숫자 중에 7의 배수이고 11의 배수인 첫번째 숫자만 출력 </h1>
+        <script>
+        for(let i=1; i<=500; i++){
+            if((i % 7 == 0)&&(i % 11 == 0)){
+                document.write(i + "<br>");
+                break;
+            }
+        }
+    </script>
+<h3>별찍기 </h3>
+<script>
+    for(let i=1 ; i<=5 ;i++){           
+        for(let j=1 ; j<=5 ;j++){           
+            document.write("*");
+        }
+        document.write( "</br>"); 
+    }
+    document.write( "</br>"); 
+    for(let i=1 ; i<=5 ;i++){           
+        for(let j=1 ; j<=i ;j++){           
+            document.write("*");
+        }
+        document.write( "</br>"); 
+    }
+    
+    document.write( "</br>"); 
+    for(let i=1 ; i<=5 ;i++){           
+        for(let j=i ; j<=5 ;j++){           
+            document.write("*");
+        }            
+        document.write( "</br>"); 
+    }
+    
+    document.write( "</br>"); 
+    for(let i=1 ; i<=5 ;i++){           
+        for(let j=i ; j<5 ;j++){           
+            document.write("&nbsp");
+        }
+
+        for(let j=1 ; j<=i ;j++){           
+            document.write("*");
+        }
+        document.write( "</br>"); 
+    }
+</script>
+
+
+
+</body>
+</html>
