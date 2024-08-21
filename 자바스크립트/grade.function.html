@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let kor=prompt("국어 점수");
+        let eng=prompt("영어 점수");
+        let math=prompt("수학 점수");
+        let sum = 0;
+        let avg = 0;
+
+        const getSum = function (){
+            sum = (Number(kor)+Number(eng)+Number(math));
+            return sum;
+        }
+
+        const getAvg = function (){
+            avg = sum/3;
+            return avg;
+        }
+
+        const levelGrade = function(){
+            if(getAvg() >= 90){
+                document.write("성적은 수입니다" + "<br>");
+            }else if(getAvg() >= 80){
+                document.write("성적은 우입니다" + "<br>");
+            }else if(getAvg() >= 70){
+                document.write("성적은 미입니다" + "<br>");
+            }else if(getAvg() >= 60){
+                document.write("성적은 양입니다" + "<br>");
+            }else {
+                document.write("성적은 가입니다" + "<br>");
+            }
+        }
+
+        document.write("총점은"+ getSum() + "<br>");
+        document.write("평균은"+ getAvg() + "<br>");
+        levelGrade();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
