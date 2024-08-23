@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        /*생성자 함수 만드는법*/
+        function Airplane(name, color, speed){
+            this.name = name;
+            this.color = color;
+            this.speed = speed;
+            this.fly = function(){
+                return this.speed + "fly!!";
+            }
+        };
+
+        let voing747 = new Airplane("보잉747","흰색","600km/h")
+        document.write(voing747.fly()+"<br>")
+        document.write(typeof(voing747)+"<br>")
+        console.log(voing747);
+
+    </script>
     <script> 
     let intArr = new Array();
     intArr[0] = 1;
