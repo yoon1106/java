@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+          내장함수 = window 객체에 있는 함수
+         
+              
+        */
+        //let timeOut = setInterval(function(){
+        //    alert("초후 한번 실행합니다.")
+        //}, 2000);
+
+        let interval =  window.setInterval(function(){
+             document.write("*")            
+         }, 1000);
+
+         setTimeout(function(){
+            clearInterval(interval);
+            document.write("7초후 종료");
+         },7000)
+         
+
+
+    </script>
+
+    <script>
+        
+      
+       
+
+    </script>
+
+    <script>
+        
+       
+       
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

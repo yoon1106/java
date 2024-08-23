@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let funName = function(){}
+
+        document.write(typeof funName + "<br>");
+
+        let objName = {};
+        document.write(typeof objName + "<br>");
+
+        let objData = {
+            num : 123,
+            str : "abc",
+            boo : true,
+            obj: {},
+            arr : [1,2,3],
+            und : undefined
+        };
+        console.log(objData);
+
+        let objCar = {
+            width : "3m",
+            height: "2m",
+            energy: 100,
+            speed : function(power){
+                return this.energy * power;
+            }
+
+        }
+
+        document.write(objCar.width + "<br>");
+        document.write(objCar.height + "<br>");
+
+        objCar.height = "6m";
+        objCar.width = "2m";
+
+        document.write(objCar.speed(100)+ "<br>");
+        document.write(objCar.height + "<br>");
+
+
+    </script>
+
+    <script>
+
+        let grade ={
+            kor:0,
+            eng:0,
+            math:0,
+                
+            getTotal : function(){
+                return this.kor + this.eng + this.math;
+            },
+            getAvg : function(){
+                return this.getTotal() / 3.0;
+            }
+
+        }
+        
+
+        console.log(grade.eng);
+        console.log(grade["eng"]);
+
+
+        let print = " ";
+
+        for(let key in grade){
+            print = key + grade[key] + "\n"
+            document.write(print + "<br>");
+        }
+
+
+        // 프로토타입(자바스크립트) 특징
+        // 자바스크립트에서는 동적으로 프라퍼티 추가 및 삭제 가능
+        grade.science = 100;
+        document.write(grade.science + "<br>");
+
+        delete grade.kor;
+        document.write(grade.kor + "<br>");
+        // grade.kor = Number( prompt("국어","국어"));
+        // grade.eng = Number( prompt("영어","영어"));
+        // grade.math = Number( prompt("수학","수학"));
+
+        // document.write(grade.getTotal() + "<br>");
+        // document.write(grade.getAvg() + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

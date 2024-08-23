@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> 
+    let intArr = new Array();
+    intArr[0] = 1;
+    intArr[1] = 1;
+
+    for(let i =0; i<intArr.length; i++){
+        document.write(intArr[i] + "<br>")
+    }
+
+    let date = new Date();
+    document.write(date.getDay());
+    document.write(date.getHours());
+    document.write(date.getMinutes());
+
+    </script>
+    <script>
+        function createCar(name,color,speed){
+
+            let carObj = {
+                name :name,
+                color: color,
+                speed : speed,
+                run : function(){
+                    return this.speed + "km/h"
+                }
+            }
+            return carObj;
+        };
+        let car = createCar("소나타","그레이",220);
+
+        document.write(car.name +"<br>");
+        document.write(car.color+"<br>");
+        document.write(car.run()+"<br>");
+
+        car = createCar("그렌져","빨강",500);
+        document.write(car.name +"<br>");
+        document.write(car.color+"<br>");
+        document.write(car.run()+"<br>");
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

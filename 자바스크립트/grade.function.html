@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
+
+    <!-- 위에꺼 내가 밑에꺼 톰T -->
+    <!-- <script>
         let kor=prompt("국어 점수");
         let eng=prompt("영어 점수");
         let math=prompt("수학 점수");
@@ -39,6 +41,78 @@
         document.write("평균은"+ getAvg() + "<br>");
         levelGrade();
     </script>
+ -->
+
+
+
+
+    <script>
+    // 4. javascript로 아래의 프로그래밍을 하시오.
+
+    // - 국영수 입력 받아 출력 합계 평균 수우미양가 출력
+    // - 합계 구하는 함수
+    // - 평균 구하는 함수 
+    // - 수우미양가 함수
+
+    // 위의 함수를 모두 익명함수로 만들것 
+        const getTotal = function(kor,eng,math){
+            return kor + eng + math;
+        }
+
+        const getAvg = function(kor,eng,math){
+            return (kor + eng + math) / 3.0;
+        }
+
+        const getGrade = function(kor,eng,math){
+
+            let grade = "수";
+            let avg = getAvg(kor,eng,math);
+            if(avg >=90){
+                grade = "수"
+            }else if(avg >=80){
+                grade = "우"
+            }else if(avg>=70){
+                grade = "미"
+            }else{
+                grade = "가"
+            }
+
+            return grade;
+        }
+
+        let kor = prompt("국어","점수를 입력하세요");
+        let eng = prompt("영어","점수를 입력하세요");
+        let math = prompt("수학","점수를 입력하세요");
+
+        let avg = getAvg(Number(kor),Number(eng),Number(math));
+        let grade =  getGrade(Number(kor),Number(eng),Number(math));
+
+        document.write("평균:" + avg  + "<br>");
+        document.write("성적:" + grade  + "입니다. <br>");
+
+    </script>
+    <!-- <script>
+        function funName(){
+
+            for(let i in arguments){
+            document.write(arguments[i] + "<br>");
+            }
+
+            return arguments;
+        }
+
+        let varArr = funName(1,2,3,4,5,6,7);
+        console.log(varArr);
+
+        for(let i in varArr){
+            document.write(varArr[i] + "<br>");
+        }
+    </script> -->
+</head>
+<body>
+    
+</body>
+</html>
 </head>
 <body>
 

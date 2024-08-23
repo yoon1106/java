@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //콜백함수
+        // 매개변수로 함수를 전달(매개변수: 함수이름)
+        //주의: 함수 호출은 안됨
+        //함수 이름 = 메모리상의 해당함수가 시작되는 첫번째 주소임
+        
+
+        function funCallback(funCB){
+            let num = funCB(3,4);
+            document.write(num + "<br>");
+        }
+
+        function add(x,y){
+            return x + y;
+        }
+
+        function sub(x,y){
+            return x - y;
+        }
+
+        function mul(x,y){
+            return x * y;
+        }
+        function div(x,y){
+            return x / y;
+        }
+
+        funCallback(add)
+        funCallback(sub)
+        funCallback(mul)
+        funCallback(div)
+
+
+    </script>
+
+    <script>
+    /*
+        클로저(closure) = (외부 변수 살아 있네.)
+        : free variable(자유변수)에 의해서 함수가 닫혀(closed)있다.
+    */
+        function outfun(width, height){
+            
+            document.write(triangle() + "<br>")
+            document.write(rectangle() + "<br>")
+
+            function triangle(){
+                return (width*height) / 2
+            }
+            
+            function rectangle(){
+                return width*height;
+            }
+        }
+
+        outfun(3,5);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

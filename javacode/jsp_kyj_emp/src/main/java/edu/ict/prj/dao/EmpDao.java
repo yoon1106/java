@@ -80,22 +80,25 @@ public class EmpDao {
 		return vos;
 
 	}
+	
+	
 	//내가 추가
-	public List<EmpVO> empInput() {
+	public EmpVO empSelectOne(int empno2) {
 
-		List<EmpVO> vos = new ArrayList<>();
+		EmpVO vo = null;
 
 		Connection connection = null;
 		Statement statement = null;
 		ResultSet rs = null;
 
-		String sql = "select * from emp";
+		String sql = "select * from emp where empno = " + empno2;
 
 		try {
 			connection = dataSource.getConnection();
 			statement = connection.createStatement();
 			rs = statement.executeQuery(sql);
 
+			//한명이기때문에 while 을 if로 줘도된다
 			while (rs.next()) {
 				int empno = rs.getInt("empno");
 				String ename = rs.getString("ename");
@@ -106,9 +109,7 @@ public class EmpDao {
 				String comm = rs.getString("comm");
 				int deptno = rs.getInt("deptno");
 				
-				EmpVO vo = new EmpVO(empno, ename, job, mgr, hiredate, sal, comm, deptno);
-
-				vos.add(vo);
+				vo = new EmpVO(empno, ename, job, mgr, hiredate, sal, comm, deptno);
 			}
 
 		} catch (Exception e) {
@@ -129,7 +130,7 @@ public class EmpDao {
 
 		}
 
-		return vos;
+		return vo;
 
 	}
 }

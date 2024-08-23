@@ -78,6 +78,10 @@ public class EmpVO {
 	public void setDeptno(int deptno) {
 		this.deptno = deptno;
 	}
+	
+	public int getNum() {
+		      return (int) ((Math.random() * 6 ) + 1);
+		   }
 
 	public EmpVO(int empno, String ename, String job, int mgr, Date hiredate, int sal, String comm, int deptno) {
 	
