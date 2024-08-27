@@ -105,7 +105,7 @@ public class BoardDao {
 	             int bstep = resultSet.getInt("bstep");
 	             int bindent = resultSet.getInt("bindent");
 	             
-	             board = new BoardVO(   bid, bname,  btitle, bcontent, bdate,  bhit, bgroup,     bstep, bindent);
+	             board = new BoardVO( bid, bname,  btitle, bcontent, bdate,  bhit, bgroup,     bstep, bindent);
 	             
 	   
 	         }
