@@ -20,13 +20,15 @@
 			<tr>
 				<td>${board.bid}</td>
 				<td>${board.bname}</td>
-				<td><c:forEach begin="1" end="${board.bindent}">-</c:forEach> <a
-					href="content_view.do?bid=${board.bid}">${board.btitle}</a></td>
+				<td><c:forEach begin="1" end="${board.bindent}">[Re]</c:forEach> 
+				<a	href="content_view.do?bid=${board.bid}">${board.btitle}</a></td>
 				<td>${board.bdate}</td>
 				<td>${board.bhit}</td>
 			</tr>
 		</c:forEach>
-
+	       <tr>
+     		    <td colspan="5"> <a href="write_view.do">글쓰기</a></td>
+           </tr>
 	</table>
 
 
