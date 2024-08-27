@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Grade(kor, eng, math){
+            this.kor = kor;
+            this.eng = eng;
+            this.math = math;
+
+        //    this.getTotal = function(){
+          //      return this.kor + this.eng + this.math
+          //  }
+        }
+        Grade.prototype.getTotal = function(){
+            return this.kor + this.eng + this.math
+        }
+
+
+        let grade = new Grade(10,20,30);
+        console.log(grade);
+        document.write(grade.getTotal() + "<br>")
+        
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
