@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cEvent{
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #f00;
+            color: #fff;
+            font-weight: bolder;
+        }
+
+        #cEvent2{
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background: red;
+            color: black;
+            font-weight: bolder;
+        }
+
+    </style>
+    <script>
+        window.onload =function(){
+            //let dTag = document.getElementById("cEvent2");
+            let dTag = document.querySelector("#cEvent2"); //선택자
+
+            dTag.onclick = function(){
+
+                if(dTag.style.background !="red"){
+                    dTag.style.background ="yellow";
+                }else if(dTag.style.background =="yellow"){
+                    dTag.style.background !="red"
+                }
+
+            }
+
+
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <div id="cEvent" ondblclick="changeColorClick()" >클릭 이벤트</div>
+    <br>
+    <div id="cEvent2" >클릭 이벤트2</div>
+
+</body>
+<script>
+        function headerClick(){
+        //document.write("클릭 이벤트 함수" + "<br>");
+        console.log('클릭이벤트');
+        alert('메롱');
+    }
+
+
+    function changeColorClick(){
+        let dTag = document.getElementById("cEvent");
+        dTag.style.background ="yellow";
+    }
+
+</script>
+</html>

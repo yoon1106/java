@@ -19,5 +19,7 @@ COMMIT;
 insert into mvc_board (bId, bName, bTitle, bContent, bHit, bGroup, bStep, bIndent) 
 values (mvc_board_seq.nextval, 'test' , '테스트', '테스트', 0, mvc_board_seq.currval, 0, 0);
 
+
+
 select * from mvc_board;
 commit;

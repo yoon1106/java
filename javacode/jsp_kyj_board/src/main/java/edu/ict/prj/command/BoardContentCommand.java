@@ -14,6 +14,8 @@ public class BoardContentCommand implements BoardCommand {
 		
 		BoardDao dao = new BoardDao();
 		BoardVO board = dao.getBoard(bid);
+		
+	    dao.upHit(bid);
 
 		request.setAttribute("board", board);
 	}

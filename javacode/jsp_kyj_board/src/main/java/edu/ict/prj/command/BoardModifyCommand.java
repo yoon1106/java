@@ -9,16 +9,16 @@ public class BoardModifyCommand implements BoardCommand {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
-		String bid = request.getParameter("bid");
+		String id = request.getParameter("bid");
 		String bname = request.getParameter("bname");
 		String btitle = request.getParameter("btitle");
 		String bcontent = request.getParameter("bcontent");
 		
 		BoardDao dao = new BoardDao();
 		
-		int rn = dao.modify(bid, bname, btitle, bcontent);
+		int rn = dao.modify(id, bname, btitle, bcontent);
 		
-		System.out.println(rn);
+		System.out.println("수정된 갯수" +rn);
 	}
 
 }

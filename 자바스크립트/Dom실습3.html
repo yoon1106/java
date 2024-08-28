@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            //document.body.innerHTML = '<p>안녕하세요</p>'
+            let pTag = document.getElementById("jstitle")
+            //pTag.innerHTML = "<h1>안녕하세요</h1>"
+
+            //pTag.parentNode.removeChild(pTag); //=body.removeChild(pTag);
+            pTag.remove();//자기자신 객체로 지우는 방법
+
+
+            
+            var str = "";
+            str += "<p id='jsTitle'> javascript & node.js </p>";
+            str += "<img id='logoImg', src='./img/logo.png',";
+            str += "width='170', height='67', tempData='logoImg'>";
+            
+            document.body.innerHTML = str;
+            
+            var titleNode = document.getElementById("jsTitle");
+            titleNode.parentNode.removeChild(titleNode);
+            
+            var logoNode = document.getElementById("logoImg");
+            logoNode.parentNode.removeChild(logoNode);
+
+
+
+        }
+        
+    </script>
+
+</head>
+<body>
+    <p id="jstitle">헬로월드</p>
+</body>
+</html>
