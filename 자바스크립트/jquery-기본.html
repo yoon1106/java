@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        window.onload = function(){
+            jQuery("p").css("color","red");
+            $("p").css("color","blue");
+
+            let myJQ =jQuery("p");
+            myJQ.css("width","300px").css("border","1px solid #ff0000")
+
+
+            // let pTag = document.querySelector("p");
+            // pTag.style.color = "red"
+        }
+    </script>
+</head>
+<body>
+    <p>안녕하세요</p>
+</body>
+</html>
