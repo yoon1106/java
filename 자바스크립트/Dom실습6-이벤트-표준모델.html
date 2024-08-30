@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            #cEventAdd {
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #f00;
+            color: #fff;
+            font-weight: bolder;
+        }
+        
+        #cEventRem {
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #0f0;
+            color: #fff;
+            font-weight: bolder;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+
+            let ceA = document.getElementById("cEventAdd");
+            let ceR = document.querySelector("#cEventRem");
+
+            function addHandler(){
+                console.log("클릭!!!")
+            }
+
+            function removeHandler(){
+                console.log("이벤트 삭제!!!")
+                ceA.removeEventListener("click", addHandler);
+            }
+
+            ceA.addEventListener("click", addHandler);
+            ceR.addEventListener("click",removeHandler);
+
+        }
+    </script>
+
+
+</head>
+<body>
+    <div id="cEventAdd">클릭 이벤트</div>
+    <div id="cEventRem">삭제 이벤트</div>
+</body>
+</html>

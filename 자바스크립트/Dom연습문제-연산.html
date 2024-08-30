@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    window.onload = function(){
+
+
+
+        let resultBtn = document.querySelector("#resultBtn");
+
+        resultBtn.addEventListener("click",function(){
+        
+        let v1 = document.querySelector("#v1").value;
+        let v2 = document.querySelector("#v2").value;
+        let result = Number(v1) + Number(v2);
+
+        document.querySelector("#result").value = result;
+        });
+
+
+
+    }
+    </script>
+
+
+
+</head>
+<body>
+    <h1>1. +연산</h1>
+    <input type="text" name="v1" id="v1" value="10">+
+    <input type="text" name="v2" id="v2" value="20">=
+    <input type="text" name="result" id="result" value="">
+    <button id="resultBtn">연산</button><br>
+    <hr>
+
+</body>
+
+</html>

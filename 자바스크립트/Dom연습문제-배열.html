@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+
+            //let arr = new Array();
+            let arr = [];
+            arr[0] ='하나';
+            arr[1] ='둘';
+            arr[2] ='셋';
+
+
+            document.write("배열 갯수 출력: " + arr.length + "<br>");
+
+            arr.push("밥먹기");
+            arr.push("운동하기");
+
+            arr.splice(2,1);//배열의 2번째 인덱스로부터 1개요소를 제거합니다
+
+           // arr.pop(); //끝에 요소 삭제
+           // arr.shift(); //첫번째 값을 삭제
+
+           delete arr[1]; //두번째 값을 삭제
+
+
+            for(let i =0; i < arr.length; i++){
+                document.write(arr[i] + "<br>")
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+
+
+</body>
+
+</html>
