@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+
+    $(document).ready(function () {
+
+      $("#sbmBtn").click(function () {
+
+        if ($("#uId").val() == "") {
+          alert("유저이름을 넣으세요")
+        } else if ($("#uPw").val() == "") {
+          alert("패스워드를 넣으세요")
+        } else {
+          alert("로그인 OK");
+          $("#loginForm").submit();
+        }
+      })
+
+    });
+
+    $(document).ready(function () {
+      $("#loginForm2").submit(function (event) {
+
+        if ($("#uId").val() == "") {
+          alert("유저이름을 넣으세요")
+          event.preventDefault();
+
+        } else if ($("#uPw").val() == "") {
+          alert("패스워드를 넣으세요")
+          event.preventDefault();
+
+        } else {
+          alert("로그인 OK");
+        }
+      })
+
+    })
+
+    $(document).ready(function(){
+
+      $("#link").click(function(e){  //e는 이벤트 객체
+        e.preventDefault();
+      })
+    })
+
+
+  </script>
+</head>
+
+<body>
+  <a id="link" href="http://www.google.com">구글</a>
+
+
+  <hr>
+  <form id="loginForm" action="http://www.google.com">
+    USER ID : <input id="uId" type="text" name="uId"><br>
+    USER PW : <input id="uPw" type="password" name="upw"><br>
+    <input id="sbmBtn" type="button" value="SUBMIT">
+    <input id="resBtn" type="button" value="RESET">
+  </form>
+  <hr>
+  <form id="loginForm2" action="http://www.google.com">
+    USER ID : <input id="uId" type="text" name="uId"><br>
+    USER PW : <input id="uPw" type="password" name="upw"><br>
+    <input id="sbmBtn" type="submit" value="SUBMIT">
+    <input id="resBtn" type="reset" value="RESET">
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+
+//제이쿼리 change 이벤트의 경우 셀렉터를 정하여 해당 셀렉터의 값이 변할경우 변화를 캐치하는 이벤트
+//아래문제에서 셀렉터 quantity여서 this.val이 quantity 호출
+    $(document).ready(function () {
+      $("#quantity").change(function(){
+        let price = $("#price").val();
+        let count = $(this).val();
+        let total= Number(price) * Number(count);
+
+        $("#total").text(total);
+      })
+
+    });
+
+
+  </script>
+</head>
+
+<body>
+  <h1>2. 총합 구하기</h1>
+
+  가격<input type="text" id="price" value="2500">X
+  수량<select id="quantity">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  총합:<span id="total"></span>
+  
+</body>
+
+</html>
