@@ -11,23 +11,61 @@
     $(document).ready(function () {
       
      // let url ="http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/RealtimeCityAir/1/99"
-      let url ="http://sample.bmaster.kro.kr/contacts?pageno=3&pagesize=10"
+      let url ="http://sample.bmaster.kro.kr/contacts?pageno=1&pagesize=10"
+
       $.ajax({
         type:"GET",
         url : url,
         success: function(response){
           console.log(response);
+
+          let htmls = "";
+          $("#list-table").html(""); //테이블안에 내용 초기화 시킴
+
+          $("<tr>",{
+            html :  "<td>" + "번호" + "</td>" + 
+                    "<td>" + "이름" + "</td>" +
+                    "<td>" + "전화번호" + "</td>" + 
+                    "<td>" + "주소" + "</td>" +
+                    "<td>" + "사진" + "</td>" +
+                    "<td>" + "삭제" + "</td>"
+
+          }).appendTo("#list-table");
+
+          $(response.contacts).each(function(index, item){
+            htmls += "<tr>";  //this.no = item.no
+            htmls += "<td>" + this.no + "</td>";
+            htmls += "<td>" + this.name + "</td>";
+            htmls += "<td>" + this.tel + "</td>";
+            htmls += "<td>" + this.address + "</td>";
+            htmls += "<td>" + "<img src =" + this.photo+ "/>" + "</td>";
+            htmls += '<td>'+ "<input type='button' class='del-button' id=" + this.no + ' value="삭제" />' +  '</td>';
+
+            htmls += "</tr>"; 
+          })
+
+          $("#list-table").append(htmls);
         }
       });
 
     });
 
+    $(document).ready(function(){
+      $(document).on("click",".del-button",function(){
+        console.log(this); //this 는 버튼을 의미하고 버튼의 부모는 td , td의 부모는 tr 이여서 부모의부모를 삭제한다
+        $(this).parent().parent().remove();
+      })
 
+    });
   </script>
 </head>
 
 <body>
-
-
+  <table id="list-table" width="500" border="1">
+    <!-- <tr>
+      <td>이름</td>
+      <td>번호</td>
+    </tr> -->
+  </table>
 </body>
 </html>

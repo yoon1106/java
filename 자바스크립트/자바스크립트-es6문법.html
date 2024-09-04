@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+
+    //변수 영역을 코드 블록 안으로 한정시킬수 있다.
+    let study = "자바스트립트";
+
+    if (study) {
+      let study = "리액트";
+      console.log('공부하자', study); // 
+    }
+
+    console.log('재밌다', window.study);
+
+    //3.문자열 템플릿
+    console.log(study + " " + "아아아");
+    console.log(`${study} 아아아`)
+
+    //4. 디폴트 파라미터
+    function activity(name = "홍길동", act = '서핑') {
+      console.log(`${name}는 ${act}를 좋아합니다.`);
+    }
+
+    activity();
+    activity('바둑이', '바둑');
+    activity('홍길순');
+
+    //5. 화살표 함수
+
+    //let lordfy = function(name){
+    //   return `열심히 공부하는 ${name}`;
+    //}
+
+    let lordfy = name => {
+      return `열심히 공부하는 ${name}`;
+    }
+
+    let add = (a,b) =>{
+      return a + b;
+    }
+
+    console.log(lordfy('바둑이'));
+    console.log(add(1,2));
+
+    //es6 객체와 배열
+    //1. 구조 분해
+    let sandwich = {
+      bread : '플랫 화이트',
+      meat : '베이컨',
+      topping : ['치즈','상추','칠리소스']
+    }
+
+
+    let makeSandwich = function({bread, meat}){
+      document.write(bread + "<br>");
+      document.write(meat + "<br>");
+    }
+    makeSandwich(sandwich);
+
+
+    // let {bread, meat} = sandwich;
+    // bread = '식빵';
+    // meat = '고기';
+    // document.write(bread + "<br>");
+    // document.write(meat + "<br>");
+    // document.write(sandwich.bread + "<br>");
+    // document.write(sandwich.meat + "<br>");
+
+    var arr =['용평','평창','홍천'];
+    document.write(arr[0] + "<br>");
+    document.write(arr[1] + "<br>");
+
+    var [arr, arr3] =['용평','평창','홍천'];
+    document.write(arr + "<br>");
+    
+    document.write(arr3 + "<br>");
+
+    //es6 객체 리터널 개선
+    let name ="백두산"
+    let elevation = '2744';
+
+    let hiking = {name, elevation};
+
+    document.write(hiking.name + "<br>");
+    document.write(hiking.elevation + "<br>");
+
+    // 스프레드 연산자
+    var food = ["닭갈비", "닭꼬치", "닭강정"];
+    var drink = ["소주", "맥주"];
+
+    //배열 내용을 조합
+    let foodDrink = [...food,...drink]
+    console.log(foodDrink);
+    document.write(foodDrink.join(',') + "<br>")
+
+    //응용
+    document.write( "<hr>")
+    food = ["닭갈비", "닭꼬치", "닭강정"];
+    let[last] =  [...food].reverse(); //reverse 는 거꾸로 스프레드는 복사본이여서 원본 훼손안시킴
+    document.write(last+ "<br>")
+    document.write(food.join(',')+ "<br>")
+
+    //클래스
+    class Person{ 
+      constructor(name, age){
+        this.name= name;
+        this.age = age;
+      }
+
+      print(){
+        console.log(`이름: ${this.name} 나이:${this.age}`)
+      }
+
+    }
+    let person = new Person('홍길동',25);
+    person.print();
+
+
+
+
+  </script>
+
+
+
+</head>
+
+<body>
+
+
+</body>
+
+</html>
