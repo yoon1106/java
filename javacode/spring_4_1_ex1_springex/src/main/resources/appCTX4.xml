@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 	Pencil pencil = new Pencil4B(); -->
+	<bean id="rectangle" class="com.javalec.ex.Rectangle"> <!-- 클래스는 파일연결 아이디는 메인겟빈앞에있는거 -->
+		<property name="width">
+				<value>10</value>
+		</property>
+		<property name="height">
+				<value>2</value>
+		</property>
+	</bean>
+	
+		<bean id="triangle" class="com.javalec.ex.Triangle"> <!-- 클래스는 파일연결 아이디는 메인겟빈앞에있는거 -->
+		<property name="width">
+				<value>10</value>
+		</property>
+		<property name="height">
+				<value>2</value>
+		</property>
+	</bean>
+</beans>
